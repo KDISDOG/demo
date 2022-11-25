@@ -6,6 +6,15 @@ const app = Vue.createApp({
       inputValue:0,
     };
   },
+  computed:{
+    fullName(){
+      console.log("running again");
+      if(this.name===''){
+        return '';
+      }
+      return this.name +' '+'Sam'
+    }
+  },
   methods:{
     add(){
       this.counter=this.counter+inputValue;
