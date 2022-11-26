@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://unpkg.com/vue@next" defer></script>
@@ -15,12 +14,12 @@
         <hr>
     </div>
     <div>
-        <p v-for="(item,index) in todos">{{ index+1 }}.{{ item }}
-            <button @click="removeTodo(index)">X</button>
+        <p v-for="todo in todos">{{ todo }}
+            <button v-on:click="removeTodo(index)">X</button>
         </p>
     </div>
     <hr>
-    <div v-if="todos.length !=0">
+    <div v-if="todos.length > 0">
         Total : {{ todos.length }} todo
         <button @click="clearAll()">Clear All</button>
     </div>
