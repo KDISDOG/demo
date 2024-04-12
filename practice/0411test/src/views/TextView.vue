@@ -1,5 +1,5 @@
 <template>
-  <First @getAnswer="A" />
+  <First @getAnswer="" />
   <Second />
   <Third />
   <Forth />
