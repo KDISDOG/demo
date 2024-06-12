@@ -6,5 +6,4 @@
 <script setup>
 import { useCounterStore } from "./stores/counter";
 const stores = useCounterStore();
-console.log(stores.count);
 </script>
